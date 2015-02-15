@@ -25,6 +25,6 @@ quboleHiveCommand<-function(query = NULL, poll_interval = NULL, sample_size = NU
     
     results<-rPython::python.call("hivecommand_from_r", query, poll_interval, sample_size, macros, tags, cluster_label, notify, name, api_token)
   
-    cat(results)
+   return(results)
 }
 
